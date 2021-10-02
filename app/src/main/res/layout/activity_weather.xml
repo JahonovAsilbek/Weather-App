@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000918"
+    tools:context=".WeatherActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_75"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/main_back"
+        android:elevation="25dp"
+        app:layout_constraintBottom_toBottomOf="@id/guide_75"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/back_btn_background"
+            android:foreground="?selectableItemBackgroundBorderless"
+            android:padding="16dp"
+            android:src="@drawable/ic_left_arrow"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/title_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_location_pin" />
+
+            <TextView
+                android:id="@+id/city_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:gravity="bottom"
+                android:paddingStart="5dp"
+                android:text="New York"
+                android:textColor="@android:color/white"
+                android:textSize="32sp" />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_45"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.45" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/cloud"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:rotationX="0"
+            android:src="@drawable/ic_rainy"
+            app:layout_constraintBottom_toBottomOf="@id/guide_45"
+            app:layout_constraintTop_toBottomOf="@id/title_layout" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_70"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.65" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/degree_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:gravity="center"
+            android:text="21\u00B0"
+            android:textColor="@android:color/white"
+            android:textSize="120dp"
+            app:layout_constraintBottom_toBottomOf="@id/guide_70"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guide_45" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Thunderstorm"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guide_70" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Monday, 17 May"
+            android:textColor="#DCDCDC"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/status" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:background="#1495CF"
+            app:layout_constraintTop_toBottomOf="@id/date" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/wind"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_wind"
+            app:layout_constraintBottom_toTopOf="@id/wind_speed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/humidity"
+            app:layout_constraintTop_toBottomOf="@id/view"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/wind_speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="13 km/h"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toTopOf="@id/wind_title"
+            app:layout_constraintLeft_toLeftOf="@id/wind"
+            app:layout_constraintRight_toRightOf="@id/wind"
+            app:layout_constraintTop_toBottomOf="@id/wind" />
+
+        <TextView
+            android:id="@+id/wind_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="Wind"
+            android:textColor="#99FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/wind"
+            app:layout_constraintRight_toRightOf="@id/wind"
+            app:layout_constraintTop_toBottomOf="@id/wind_speed" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/humidity"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:src="@drawable/ic_humidity"
+            app:layout_constraintBottom_toTopOf="@id/humidity_percent"
+            app:layout_constraintLeft_toRightOf="@id/wind"
+            app:layout_constraintRight_toLeftOf="@id/chance_of_rain"
+            app:layout_constraintTop_toBottomOf="@id/view"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/humidity_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="24%"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toTopOf="@id/humidity_title"
+            app:layout_constraintLeft_toLeftOf="@id/humidity"
+            app:layout_constraintRight_toRightOf="@id/humidity"
+            app:layout_constraintTop_toBottomOf="@id/humidity" />
+
+        <TextView
+            android:id="@+id/humidity_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="Humidity"
+            android:textColor="#99FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/humidity"
+            app:layout_constraintRight_toRightOf="@id/humidity"
+            app:layout_constraintTop_toBottomOf="@id/humidity_percent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/chance_of_rain"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/chance_of_rain"
+            app:layout_constraintBottom_toTopOf="@id/rain_percent"
+            app:layout_constraintLeft_toRightOf="@id/humidity"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/rain_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="87%"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toTopOf="@id/rain_title"
+            app:layout_constraintLeft_toLeftOf="@id/chance_of_rain"
+            app:layout_constraintRight_toRightOf="@id/chance_of_rain"
+            app:layout_constraintTop_toBottomOf="@id/chance_of_rain" />
+
+        <TextView
+            android:id="@+id/rain_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="Chance of rain"
+            android:textColor="#99FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/chance_of_rain"
+            app:layout_constraintRight_toRightOf="@id/chance_of_rain"
+            app:layout_constraintTop_toBottomOf="@id/rain_percent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
