@@ -3,12 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../Documents/Sdk/platforms/android-31/data/res/drawable/ratingbar_indicator_material.xml" value="0.13289902280130292" />
         <entry key="app/src/main/res/drawable/back_btn_background.xml" value="0.13421052631578947" />
+        <entry key="app/src/main/res/drawable/card_back.xml" value="0.13289902280130292" />
         <entry key="app/src/main/res/drawable/chance_of_rain.xml" value="0.13421052631578947" />
+        <entry key="app/src/main/res/drawable/get_weather_back.xml" value="0.13289902280130292" />
+        <entry key="app/src/main/res/drawable/ic_cloud.xml" value="0.13289902280130292" />
         <entry key="app/src/main/res/drawable/ic_humidity.xml" value="0.13421052631578947" />
         <entry key="app/src/main/res/drawable/ic_left_arrow.xml" value="0.13421052631578947" />
         <entry key="app/src/main/res/drawable/ic_location_pin.xml" value="0.13421052631578947" />
         <entry key="app/src/main/res/drawable/ic_rainy.xml" value="0.13421052631578947" />
+        <entry key="app/src/main/res/drawable/ic_smoke.xml" value="0.13289902280130292" />
+        <entry key="app/src/main/res/drawable/ic_sun.xml" value="0.13289902280130292" />
         <entry key="app/src/main/res/drawable/ic_wind.xml" value="0.13421052631578947" />
         <entry key="app/src/main/res/drawable/main_back.xml" value="0.2125" />
         <entry key="app/src/main/res/layout/activity_maps.xml" value="0.17753623188405798" />
@@ -21,5 +27,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.17753623188405798" />
+      </ProjectState>
+    </option>
   </component>
 </project>
