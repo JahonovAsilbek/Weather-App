@@ -2,6 +2,7 @@ package uz.pdp.weatherapp
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
@@ -35,6 +36,7 @@ class WeatherActivity : AppCompatActivity() {
         weatherViewModel.getWeather(latitude, longitude, API_KEY).observe(this, Observer {
 
             binding.apply {
+                progress.visibility= View.INVISIBLE
                 cityName.text = it.name
 
                 when (it.weather!![0].main) {
